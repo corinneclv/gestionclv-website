@@ -8,15 +8,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------- Navigation scroll effect --------------------
   const nav = document.getElementById('nav');
 
+  // -------------------- Parallax scroll effect --------------------
+  const parallaxEls = document.querySelectorAll('[data-parallax]');
+  const viewportH = window.innerHeight;
+
+  const handleParallax = () => {
+    parallaxEls.forEach(el => {
+      const speed = parseFloat(el.dataset.parallax) || 0.12;
+      const rect = el.getBoundingClientRect();
+      const elMid = rect.top + rect.height / 2;
+      const offset = (elMid - viewportH / 2) * speed;
+      el.style.transform = `translateY(${offset}px)`;
+    });
+  };
+
   const handleScroll = () => {
     if (window.scrollY > 50) {
       nav.classList.add('nav--scrolled');
     } else {
       nav.classList.remove('nav--scrolled');
     }
+    handleParallax();
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
+  handleParallax();
 
   // -------------------- Mobile menu toggle --------------------
   const navToggle = document.getElementById('navToggle');

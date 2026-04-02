@@ -1170,6 +1170,10 @@ ul {
 }
 
 /* -------------------- ANIMATIONS -------------------- */
+[data-parallax] {
+  will-change: transform;
+}
+
 [data-animate] {
   opacity: 0;
   transform: translateY(24px);
