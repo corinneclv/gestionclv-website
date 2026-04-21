@@ -309,14 +309,13 @@ ul { list-style: none; }
   position: absolute;
   right: -80px;
   top: 20px;
-  font-size: 640px;
-  line-height: 1;
+  width: 640px;
   color: var(--sauge-soft);
   opacity: 0.07;
   pointer-events: none;
   user-select: none;
-  font-family: Georgia, serif;
 }
+.hero__clover-bg svg { width: 100%; height: auto; display: block; }
 
 .hero__container {
   max-width: 1200px;
@@ -508,18 +507,12 @@ ul { list-style: none; }
   gap: 80px;
   align-items: start;
 }
-.about__image-col {
-  position: sticky;
-  top: 110px;
-}
 .about__image-wrapper {
   position: relative;
 }
 .about__image {
   width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
   display: block;
 }
 .about__text {
@@ -1021,14 +1014,13 @@ ul { list-style: none; }
 /* -------------------- SECTION CLOVER BG (reusable) -------------------- */
 .section-clover-bg {
   position: absolute;
-  font-size: 540px;
-  line-height: 1;
+  width: 520px;
   color: var(--sauge-soft);
   opacity: 0.05;
   pointer-events: none;
   user-select: none;
-  font-family: Georgia, serif;
 }
+.section-clover-bg svg { width: 100%; height: auto; display: block; }
 .section-clover-bg--left  { left: -120px; bottom: -60px; }
 .section-clover-bg--right { right: -120px; top: 20px; }
 
@@ -1043,14 +1035,13 @@ ul { list-style: none; }
   position: absolute;
   right: -120px;
   bottom: -80px;
-  font-size: 580px;
-  line-height: 1;
+  width: 580px;
   color: var(--sauge-soft);
   opacity: 0.05;
   pointer-events: none;
   user-select: none;
-  font-family: Georgia, serif;
 }
+.contact__clover-bg svg { width: 100%; height: auto; display: block; }
 .contact__header {
   max-width: 600px;
   margin-bottom: 52px;
@@ -1312,7 +1303,8 @@ ul { list-style: none; }
   .hero__rule { margin: 32px auto 24px; }
   .hero__tagline { max-width: 100%; margin-left: auto; margin-right: auto; }
   .hero__actions { justify-content: center; }
-  .hero__clover-bg { font-size: 400px; right: -40px; top: 30px; }
+  .hero__clover-bg { width: 400px; right: -40px; top: 30px; }
+  .section-clover-bg { width: 380px; }
   .hero__portrait-card { left: -16px; bottom: -20px; }
 
   .promise__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1375,7 +1367,9 @@ ul { list-style: none; }
   .nav__toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
   .hero__title { letter-spacing: -2px; }
-  .hero__clover-bg { font-size: 260px; right: -20px; top: 80px; }
+  .hero__clover-bg { width: 240px; right: -20px; top: 80px; }
+  .section-clover-bg { width: 220px; }
+  .contact__clover-bg { width: 280px; }
   .hero__scroll { display: none; }
 
   .promise__grid { grid-template-columns: 1fr; }
