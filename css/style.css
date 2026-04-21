@@ -687,6 +687,20 @@ ul { list-style: none; }
 .editorial-quote {
   padding: 120px 0;
   background-color: var(--sable);
+  background-image: url('../images/corinne-travail-1.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  position: relative;
+}
+.editorial-quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(217, 204, 180, 0.90);
+}
+.editorial-quote .container {
+  position: relative;
+  z-index: 1;
 }
 .editorial-quote__inner {
   text-align: center;
