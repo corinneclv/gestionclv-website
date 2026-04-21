@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Amie Comptable — La comptabilité, expliquée simplement.</title>
-  <meta name="description" content="Corinne est CPA membre de l'Ordre des CPA du Québec. Sa mission : rendre la comptabilité accessible, humaine et sans jargon pour les travailleurs autonomes et entrepreneurs.">
+  <meta name="description" content="Corinne est CPA membre de l'Ordre des CPA du Québec. Son amie comptable pour les milléniaux. Sans jargon, sans jugement, avec beaucoup de café.">
   <meta name="keywords" content="CPA, comptable, Québec, fiscalité, travailleur autonome, entrepreneur, Mon Amie Comptable, Gestion CLV">
   <meta property="og:title" content="Mon Amie Comptable — La comptabilité, expliquée simplement.">
-  <meta property="og:description" content="CPA membre de l'Ordre des CPA du Québec. Comptabilité accessible, humaine et sans jargon.">
+  <meta property="og:description" content="CPA membre de l'Ordre des CPA du Québec. Sans jargon, sans jugement.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Favicon - M monogramme -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%231C2419' stroke='%23A8BAA0' stroke-width='2'/><text x='50' y='62' font-family='serif' font-size='40' fill='%23A8BAA0' text-anchor='middle'>M</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231C2A20'/><text y='.85em' font-size='72' text-anchor='middle' x='50'>&#x2618;</text></svg>">
 </head>
 <body>
 
@@ -22,11 +21,8 @@
   <nav class="nav" id="nav">
     <div class="nav__container">
       <a href="#" class="nav__logo">
-        <div class="nav__monogram">M</div>
-        <div class="nav__brand">
-          <span class="nav__brand-name">Mon Amie Comptable</span>
-          <span class="nav__brand-sub">GESTION CLV</span>
-        </div>
+        <span class="nav__clover">&#9752;</span>
+        <span class="nav__wordmark">Mon amie <em>comptable</em></span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span>
@@ -34,10 +30,10 @@
         <span></span>
       </button>
       <ul class="nav__menu" id="navMenu">
-        <li><a href="#services">Services</a></li>
         <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#ressources">Ressources</a></li>
-        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="#contact" class="nav__cta">Prendre rendez-vous</a></li>
       </ul>
     </div>
@@ -45,91 +41,67 @@
 
   <!-- ==================== HERO ==================== -->
   <header class="hero" id="hero">
+    <div class="hero__clover-bg" aria-hidden="true">&#9752;</div>
     <div class="hero__container">
       <div class="hero__content">
-        <p class="hero__label">CPA &middot; FISCALITÉ &middot; GESTION CLV</p>
+        <p class="eyebrow eyebrow--sage">CPA &middot; Consultante &middot; Pour les mill&eacute;niaux</p>
         <h1 class="hero__title">
-          Salut, moi c'est<br>
-          <em>Corinne.</em>
+          Des finances<br>
+          qui te <em>ressemblent.</em>
         </h1>
-        <p class="hero__subtitle">
-          Comptable professionnelle agréée &amp; membre de l'Ordre des CPA du Québec.
-        </p>
+        <div class="hero__rule"></div>
         <p class="hero__tagline">
-          La comptabilité, expliquée par une amie.
+          L&rsquo;amie comptable que tu aurais voulu avoir pour te parler d&rsquo;argent. Sans jugement, sans jargon, avec beaucoup de caf&eacute;.
         </p>
         <div class="hero__actions">
-          <a href="#services" class="btn btn--primary">Découvre mes services</a>
-          <a href="#ressources" class="btn btn--outline">Ressources gratuites</a>
+          <a href="#services" class="btn btn--light">D&eacute;couvrir mes services</a>
+          <a href="#contact" class="btn btn--ghost-light">Prendre un caf&eacute; virtuel &rarr;</a>
         </div>
       </div>
-      <div class="hero__visual" data-parallax="0.18">
-        <div class="hero__image-placeholder">
-          <div class="hero__image-circle">
-            <span>Photo<br>de<br>Corinne</span>
+      <div class="hero__visual" data-parallax="0.15">
+        <div class="hero__portrait">
+          <div class="hero__portrait-inner">
+            <span class="hero__portrait-label">Photo<br>de<br>Corinne</span>
+            <div class="hero__portrait-clover" aria-hidden="true">&#9752;</div>
+          </div>
+          <div class="hero__portrait-card">
+            <p class="eyebrow eyebrow--dark">Depuis 2015</p>
+            <div class="hero__card-name"><em>Corinne</em>, CPA</div>
+            <p class="hero__card-sub">Consultante &middot; fondatrice Gestion CLV</p>
           </div>
         </div>
       </div>
     </div>
     <div class="hero__scroll">
-      <span>Défiler</span>
+      <span>D&eacute;filer</span>
       <div class="hero__scroll-line"></div>
     </div>
   </header>
 
-  <!-- ==================== SERVICES ==================== -->
-  <section class="services" id="services">
+  <!-- ==================== PROMISE STRIP ==================== -->
+  <section class="promise">
     <div class="container">
-      <p class="section-label">COMMENT JE PEUX T'AIDER</p>
-      <h2 class="section-title">Mes <em>services</em></h2>
-      <div class="services__divider"></div>
-      <div class="services__grid">
-
-        <div class="service-card" data-animate>
-          <div class="service-card__number">01</div>
-          <h3 class="service-card__title">Consultation fiscale</h3>
-          <p class="service-card__text">
-            Tu es travailleur autonome ou entrepreneur et tu veux comprendre ta situation fiscale?
-            Je t'accompagne étape par étape pour optimiser tes impôts en toute légalité.
-          </p>
-          <ul class="service-card__list">
-            <li>Déclaration de revenus</li>
-            <li>Planification fiscale</li>
-            <li>TPS/TVQ et acomptes provisionnels</li>
-          </ul>
-          <a href="#contact" class="btn btn--small">En savoir plus</a>
+      <div class="promise__grid">
+        <div class="promise__item" data-animate>
+          <div class="promise__number">01</div>
+          <div class="promise__title">Sans jargon</div>
+          <p class="promise__text">Les imp&ocirc;ts traduits en humain.</p>
         </div>
-
-        <div class="service-card service-card--featured" data-animate>
-          <div class="service-card__number">02</div>
-          <h3 class="service-card__title">Accompagnement comptable</h3>
-          <p class="service-card__text">
-            Un suivi personnalisé pour que tu comprennes enfin tes chiffres.
-            Pas de jargon, pas de condescendance — juste des réponses claires.
-          </p>
-          <ul class="service-card__list">
-            <li>Tenue de livres</li>
-            <li>États financiers</li>
-            <li>Mise en place de systèmes</li>
-          </ul>
-          <a href="#contact" class="btn btn--small btn--light">Prendre rendez-vous</a>
+        <div class="promise__item" data-animate>
+          <div class="promise__number">02</div>
+          <div class="promise__title">Sans jugement</div>
+          <p class="promise__text">La question niaiseuse n&rsquo;existe pas ici.</p>
         </div>
-
-        <div class="service-card" data-animate>
-          <div class="service-card__number">03</div>
-          <h3 class="service-card__title">Contenu éducatif</h3>
-          <p class="service-card__text">
-            Je crée du contenu pour que tu puisses apprendre à ton rythme.
-            Des guides, des templates et des publications qui démystifient la comptabilité.
-          </p>
-          <ul class="service-card__list">
-            <li>Guides pratiques</li>
-            <li>Templates Excel et Google Sheets</li>
-            <li>Publications Instagram éducatives</li>
-          </ul>
-          <a href="#ressources" class="btn btn--small">Voir les ressources</a>
+        <div class="promise__item" data-animate>
+          <div class="promise__number">03</div>
+          <div class="promise__title">Sans pression</div>
+          <p class="promise__text">Jamais de vente. Juste ce qui t&rsquo;aide, vraiment.</p>
         </div>
-
+        <div class="promise__item" data-animate>
+          <div class="promise__number">04</div>
+          <div class="promise__title">Sans flou</div>
+          <p class="promise__text">&Ccedil;a d&eacute;pend de ta situation &mdash; et on la regarde ensemble.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -138,66 +110,50 @@
   <section class="about" id="a-propos">
     <div class="container">
       <div class="about__grid">
-        <div class="about__image-col" data-parallax="0.1">
+        <div class="about__image-col" data-parallax="0.08">
           <div class="about__image-wrapper">
             <div class="about__image-placeholder">
-              <span>Photo<br>de<br>Corinne</span>
+              <span>Photo<br>lifestyle<br>bureau</span>
             </div>
-            <div class="about__image-accent"></div>
           </div>
         </div>
         <div class="about__content">
-          <p class="section-label">À PROPOS</p>
-          <h2 class="section-title">Hey, <em>enchantée!</em></h2>
-          <div class="services__divider"></div>
+          <p class="eyebrow">Bonjour, moi c&rsquo;est Corinne</p>
+          <h2 class="section-title">
+            Comptable par formation,<br>
+            <em>ton amie</em> par conviction.
+          </h2>
+          <div class="rule"></div>
           <p class="about__text">
-            Je suis Corinne, CPA membre de l'Ordre des CPA du Québec, et je suis passionnée par une chose :
-            <strong>rendre la comptabilité accessible à tout le monde.</strong>
+            Je suis CPA depuis dix ans, consultante et fondatrice de Gestion CLV. Dans mon entourage, les finances, &ccedil;a intimide. Je veux changer &ccedil;a.
           </p>
           <p class="about__text">
-            J'opère sous Gestion CLV et ma mission, c'est d'être l'amie de confiance qui t'explique les finances
-            sans condescendance. Que tu sois travailleur autonome, freelance, entrepreneur ou simplement quelqu'un
-            qui veut enfin comprendre sa situation fiscale — tu es au bon endroit.
+            Je veux &ecirc;tre l&rsquo;amie &agrave; qui tu poses ta question sans te sentir jug&eacute;. Pas de jargon. Pas de &laquo;&nbsp;il convient de noter que&nbsp;&raquo;. Juste la vraie information, au bon moment, avec beaucoup de chaleur.
           </p>
           <p class="about__text">
-            Sur mes réseaux sociaux <strong>@monamiecomptable</strong> et <strong>@milesococo</strong>,
-            je partage des conseils concrets et éducatifs. Ici, on va plus loin ensemble.
+            Sur mes r&eacute;seaux <strong>@monamiecomptable</strong> et <strong>@milesococo</strong>, je partage des conseils concrets et &eacute;ducatifs. Ici, on va plus loin ensemble.
           </p>
-          <div class="about__values">
-            <div class="about__value">
-              <span class="about__value-icon">&#10003;</span>
-              <span>Accessible</span>
-            </div>
-            <div class="about__value">
-              <span class="about__value-icon">&#10003;</span>
-              <span>Éducative</span>
-            </div>
-            <div class="about__value">
-              <span class="about__value-icon">&#10003;</span>
-              <span>Experte</span>
-            </div>
-          </div>
-          <a href="#contact" class="btn btn--primary">Travaillons ensemble</a>
+          <a href="#contact" class="btn btn--dark">Travaillons ensemble</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== BANDEAU STATISTIQUES ==================== -->
+  <!-- ==================== STATS ==================== -->
   <section class="stats">
     <div class="container">
       <div class="stats__grid">
         <div class="stats__item" data-animate>
           <span class="stats__number">10+</span>
-          <span class="stats__desc">Années d'expérience</span>
+          <span class="stats__desc">Ann&eacute;es d&rsquo;exp&eacute;rience</span>
         </div>
         <div class="stats__item" data-animate>
           <span class="stats__number">CPA</span>
-          <span class="stats__desc">Membre de l'Ordre du Québec</span>
+          <span class="stats__desc">Membre de l&rsquo;Ordre du Qu&eacute;bec</span>
         </div>
         <div class="stats__item" data-animate>
           <span class="stats__number">100+</span>
-          <span class="stats__desc">Clients accompagnés</span>
+          <span class="stats__desc">Clients accompagn&eacute;s</span>
         </div>
         <div class="stats__item" data-animate>
           <span class="stats__number">0</span>
@@ -207,104 +163,70 @@
     </div>
   </section>
 
-  <!-- ==================== RESSOURCES ==================== -->
-  <section class="resources" id="ressources">
+  <!-- ==================== SERVICES ==================== -->
+  <section class="services" id="services">
     <div class="container">
-      <p class="section-label">RESSOURCES GRATUITES</p>
-      <h2 class="section-title">Apprends à <em>ton rythme</em></h2>
-      <div class="services__divider"></div>
-      <p class="resources__intro">
-        Des outils concrets pour enfin comprendre ta comptabilité et tes finances.
-      </p>
-      <div class="resources__grid">
-
-        <div class="resource-card" data-animate>
-          <div class="resource-card__badge">GRATUIT</div>
-          <div class="resource-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="6" width="32" height="36" rx="2" stroke="currentColor" stroke-width="2"/>
-              <line x1="14" y1="16" x2="34" y2="16" stroke="currentColor" stroke-width="2"/>
-              <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="2"/>
-              <line x1="14" y1="28" x2="28" y2="28" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
-          <h3 class="resource-card__title">Guide du travailleur autonome</h3>
-          <p class="resource-card__text">
-            Tout ce que tu dois savoir pour bien gérer ta fiscalité quand tu te lances à ton compte.
-          </p>
-          <a href="#contact" class="btn btn--small">Télécharger</a>
+      <div class="services__header">
+        <div>
+          <p class="eyebrow eyebrow--sage">Services &middot; accompagnements</p>
+          <h2 class="section-title section-title--light">
+            Trois fa&ccedil;ons de <em>travailler ensemble.</em>
+          </h2>
         </div>
-
-        <div class="resource-card" data-animate>
-          <div class="resource-card__badge">GRATUIT</div>
-          <div class="resource-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="40" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
-              <line x1="4" y1="16" x2="44" y2="16" stroke="currentColor" stroke-width="2"/>
-              <line x1="16" y1="16" x2="16" y2="40" stroke="currentColor" stroke-width="2"/>
-              <line x1="28" y1="16" x2="28" y2="40" stroke="currentColor" stroke-width="2"/>
-            </svg>
+        <p class="services__sub">
+          Tout part d&rsquo;un appel de 30 minutes, sans engagement.
+        </p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card" data-animate>
+          <div class="service-card__top">
+            <span class="service-card__num">01</span>
+            <span class="service-card__clover" aria-hidden="true">&#9752;</span>
           </div>
-          <h3 class="resource-card__title">Template budget mensuel</h3>
-          <p class="resource-card__text">
-            Un tableur simple et clair pour suivre tes revenus et dépenses chaque mois.
+          <h3 class="service-card__title">Appel d&eacute;couverte</h3>
+          <div class="service-card__price">Gratuit &middot; 30 min</div>
+          <p class="service-card__text">
+            On se rencontre, tu racontes ta situation, je te dis si je suis la bonne personne pour t&rsquo;aider. Z&eacute;ro pression.
           </p>
-          <a href="#contact" class="btn btn--small">Télécharger</a>
+          <a href="#contact" class="service-card__link">En savoir plus &rarr;</a>
         </div>
-
-        <div class="resource-card" data-animate>
-          <div class="resource-card__badge">GRATUIT</div>
-          <div class="resource-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
-              <path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+        <div class="service-card service-card--featured" data-animate>
+          <div class="service-card__top">
+            <span class="service-card__num">02</span>
+            <span class="service-card__clover" aria-hidden="true">&#9752;</span>
           </div>
-          <h3 class="resource-card__title">Checklist fin d'année fiscale</h3>
-          <p class="resource-card__text">
-            Ne manque rien avant de produire ta déclaration de revenus. Étape par étape.
+          <h3 class="service-card__title">Accompagnement ponctuel</h3>
+          <div class="service-card__price">&Agrave; partir de 250&nbsp;$ &middot; 1 &agrave; 3 rencontres</div>
+          <p class="service-card__text">
+            Une question pr&eacute;cise, un dossier &agrave; d&eacute;bloquer, un deuxi&egrave;me avis. Tu repars autonome avec des r&eacute;ponses claires.
           </p>
-          <a href="#contact" class="btn btn--small">Télécharger</a>
+          <a href="#contact" class="service-card__link">En savoir plus &rarr;</a>
         </div>
-
+        <div class="service-card" data-animate>
+          <div class="service-card__top">
+            <span class="service-card__num">03</span>
+            <span class="service-card__clover" aria-hidden="true">&#9752;</span>
+          </div>
+          <h3 class="service-card__title">Suivi annuel</h3>
+          <div class="service-card__price">Forfait &middot; sur mesure</div>
+          <p class="service-card__text">
+            Ton amie comptable toute l&rsquo;ann&eacute;e. Imp&ocirc;ts, planification, questions du quotidien. Je deviens ta personne de confiance.
+          </p>
+          <a href="#contact" class="service-card__link">En savoir plus &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROCESSUS ==================== -->
-  <section class="process">
+  <!-- ==================== CITATION ÉDITORIALE ==================== -->
+  <section class="editorial-quote">
     <div class="container">
-      <p class="section-label">COMMENT ÇA FONCTIONNE</p>
-      <h2 class="section-title">Travailler avec moi, <em>c'est simple.</em></h2>
-      <div class="services__divider"></div>
-      <div class="process__grid">
-        <div class="process__step" data-animate>
-          <div class="process__number">01</div>
-          <h3 class="process__step-title">On jase</h3>
-          <p class="process__step-text">
-            Réserve un appel découverte gratuit. On regarde ta situation ensemble, sans engagement.
-          </p>
-        </div>
-        <div class="process__arrow">
-          <svg viewBox="0 0 40 20" fill="none"><path d="M0 10h36M30 4l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
-        </div>
-        <div class="process__step" data-animate>
-          <div class="process__number">02</div>
-          <h3 class="process__step-title">On planifie</h3>
-          <p class="process__step-text">
-            Je te propose un plan d'action adapté à tes besoins et à ton budget.
-          </p>
-        </div>
-        <div class="process__arrow">
-          <svg viewBox="0 0 40 20" fill="none"><path d="M0 10h36M30 4l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
-        </div>
-        <div class="process__step" data-animate>
-          <div class="process__number">03</div>
-          <h3 class="process__step-title">On avance</h3>
-          <p class="process__step-text">
-            Tu comprends enfin tes chiffres et tu prends le contrôle de tes finances.
-          </p>
-        </div>
+      <div class="editorial-quote__inner" data-animate>
+        <span class="editorial-quote__clover" aria-hidden="true">&#9752;</span>
+        <blockquote class="editorial-quote__text">
+          &laquo;&nbsp;Je veux &ecirc;tre l&rsquo;amie que t&rsquo;aurais voulu avoir pour te parler d&rsquo;argent. Sans jugement, sans jargon, sans te rabaisser.&nbsp;&raquo;
+        </blockquote>
+        <div class="editorial-quote__attr">Corinne &middot; CPA &middot; Fondatrice</div>
       </div>
     </div>
   </section>
@@ -312,31 +234,27 @@
   <!-- ==================== TÉMOIGNAGES ==================== -->
   <section class="testimonials" id="temoignages">
     <div class="container">
-      <p class="section-label">TÉMOIGNAGES</p>
-      <h2 class="section-title">Ce qu'on dit <em>de moi</em></h2>
-      <div class="services__divider"></div>
+      <p class="eyebrow">T&eacute;moignages</p>
+      <h2 class="section-title">Ce qu&rsquo;on dit <em>de moi</em></h2>
+      <div class="rule"></div>
       <div class="testimonials__grid">
-
         <div class="testimonial-card" data-animate>
           <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote class="testimonial-card__quote">
-            &laquo; Corinne m'a expliqué mes impôts comme personne ne l'avait fait avant.
-            J'ai enfin compris mes acomptes provisionnels! &raquo;
+            &laquo;&nbsp;Corinne m&rsquo;a expliqu&eacute; mes imp&ocirc;ts comme personne ne l&rsquo;avait fait avant. J&rsquo;ai enfin compris mes acomptes provisionnels!&nbsp;&raquo;
           </blockquote>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">M</div>
             <div>
-              <strong>Marie-Ève L.</strong>
+              <strong>Marie-&Egrave;ve L.</strong>
               <span>Travailleuse autonome</span>
             </div>
           </div>
         </div>
-
         <div class="testimonial-card" data-animate>
           <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote class="testimonial-card__quote">
-            &laquo; Enfin quelqu'un qui parle comptabilité sans me faire sentir nul.
-            Merci Corinne, tu es vraiment mon amie comptable! &raquo;
+            &laquo;&nbsp;Enfin quelqu&rsquo;un qui parle comptabilit&eacute; sans me faire sentir nul. Merci Corinne, tu es vraiment mon amie comptable!&nbsp;&raquo;
           </blockquote>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">J</div>
@@ -346,12 +264,10 @@
             </div>
           </div>
         </div>
-
         <div class="testimonial-card" data-animate>
           <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote class="testimonial-card__quote">
-            &laquo; Son contenu sur Instagram m'a sauvé des heures de recherche.
-            Ses consultations sont un investissement qui en vaut tellement la peine. &raquo;
+            &laquo;&nbsp;Son contenu sur Instagram m&rsquo;a sauv&eacute; des heures de recherche. Ses consultations sont un investissement qui en vaut tellement la peine.&nbsp;&raquo;
           </blockquote>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">S</div>
@@ -361,7 +277,58 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ==================== RESSOURCES ==================== -->
+  <section class="resources" id="ressources">
+    <div class="container">
+      <p class="eyebrow">Ressources gratuites</p>
+      <h2 class="section-title">Apprends &agrave; <em>ton rythme</em></h2>
+      <div class="rule"></div>
+      <p class="resources__intro">Des outils concrets pour enfin comprendre ta comptabilit&eacute; et tes finances.</p>
+      <div class="resources__grid">
+        <div class="resource-card" data-animate>
+          <div class="resource-card__badge">GRATUIT</div>
+          <div class="resource-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="6" width="32" height="36" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="16" x2="34" y2="16" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="28" x2="28" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="resource-card__title">Guide du travailleur autonome</h3>
+          <p class="resource-card__text">Tout ce que tu dois savoir pour bien g&eacute;rer ta fiscalit&eacute; quand tu te lances &agrave; ton compte.</p>
+          <a href="#contact" class="btn btn--outline btn--sm">T&eacute;l&eacute;charger</a>
+        </div>
+        <div class="resource-card" data-animate>
+          <div class="resource-card__badge">GRATUIT</div>
+          <div class="resource-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="40" height="32" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="4" y1="16" x2="44" y2="16" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="16" y1="16" x2="16" y2="40" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="28" y1="16" x2="28" y2="40" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="resource-card__title">Template budget mensuel</h3>
+          <p class="resource-card__text">Un tableur simple et clair pour suivre tes revenus et d&eacute;penses chaque mois.</p>
+          <a href="#contact" class="btn btn--outline btn--sm">T&eacute;l&eacute;charger</a>
+        </div>
+        <div class="resource-card" data-animate>
+          <div class="resource-card__badge">GRATUIT</div>
+          <div class="resource-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 14v10l7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="resource-card__title">Checklist fin d&rsquo;ann&eacute;e fiscale</h3>
+          <p class="resource-card__text">Ne manque rien avant de produire ta d&eacute;claration de revenus. &Eacute;tape par &eacute;tape.</p>
+          <a href="#contact" class="btn btn--outline btn--sm">T&eacute;l&eacute;charger</a>
+        </div>
       </div>
     </div>
   </section>
@@ -369,50 +336,43 @@
   <!-- ==================== INSTAGRAM ==================== -->
   <section class="instagram">
     <div class="container">
-      <p class="section-label">RÉSEAUX SOCIAUX</p>
-      <h2 class="section-title">Suis-moi sur <em>Instagram</em></h2>
-      <div class="services__divider"></div>
-      <p class="instagram__intro">
-        Du contenu éducatif sur la comptabilité et la fiscalité,
-        expliqué simplement et avec bienveillance.
-      </p>
+      <p class="eyebrow eyebrow--sage">R&eacute;seaux sociaux</p>
+      <h2 class="section-title section-title--light">Suis-moi sur <em>Instagram</em></h2>
+      <div class="rule rule--light"></div>
+      <p class="instagram__intro">Du contenu &eacute;ducatif sur la comptabilit&eacute; et la fiscalit&eacute;, expliqu&eacute; simplement et avec bienveillance.</p>
       <div class="instagram__grid">
-        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post" data-animate>
+        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post instagram__post--foret" data-animate>
           <div class="instagram__post-inner">
-            <span class="instagram__post-label">FISCALITÉ &middot; CPA</span>
-            <span class="instagram__post-title">5 dépenses que tu oublies de déduire</span>
+            <span class="instagram__post-label">FISCALIT&Eacute; &middot; CPA</span>
+            <span class="instagram__post-title">5 d&eacute;penses que tu oublies de d&eacute;duire</span>
             <span class="instagram__post-handle">@monamiecomptable</span>
           </div>
         </a>
-        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post instagram__post--dark" data-animate>
+        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post instagram__post--sable" data-animate>
           <div class="instagram__post-inner">
             <span class="instagram__post-label">TRAVAILLEUR AUTONOME</span>
-            <span class="instagram__post-title">Acomptes provisionnels — tout savoir</span>
+            <span class="instagram__post-title">Acomptes provisionnels &mdash; tout savoir</span>
             <span class="instagram__post-handle">@monamiecomptable</span>
           </div>
         </a>
-        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post instagram__post--forest" data-animate>
+        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post instagram__post--sauge" data-animate>
           <div class="instagram__post-inner">
             <span class="instagram__post-label">CONSEILS &middot; GESTION CLV</span>
-            <span class="instagram__post-title">TPS/TVQ : qui doit s'inscrire?</span>
+            <span class="instagram__post-title">TPS/TVQ&nbsp;: qui doit s&rsquo;inscrire?</span>
             <span class="instagram__post-handle">@monamiecomptable</span>
           </div>
         </a>
         <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="instagram__post instagram__post--cream" data-animate>
           <div class="instagram__post-inner">
-            <span class="instagram__post-label">COMPTABILITÉ &middot; BASES</span>
-            <span class="instagram__post-title">Comprendre ton relevé de compte en 3 étapes</span>
+            <span class="instagram__post-label">COMPTABILIT&Eacute; &middot; BASES</span>
+            <span class="instagram__post-title">Comprendre ton relev&eacute; de compte en 3 &eacute;tapes</span>
             <span class="instagram__post-handle">@monamiecomptable</span>
           </div>
         </a>
       </div>
       <div class="instagram__cta">
-        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="btn btn--primary">
-          @monamiecomptable
-        </a>
-        <a href="https://instagram.com/milesococo" target="_blank" rel="noopener" class="btn btn--outline">
-          @milesococo
-        </a>
+        <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="btn btn--light">@monamiecomptable</a>
+        <a href="https://instagram.com/milesococo" target="_blank" rel="noopener" class="btn btn--ghost-light">@milesococo</a>
       </div>
     </div>
   </section>
@@ -420,15 +380,15 @@
   <!-- ==================== NEWSLETTER ==================== -->
   <section class="newsletter">
     <div class="container">
-      <div class="newsletter__box" data-parallax="0.07">
+      <div class="newsletter__box" data-parallax="0.06">
+        <span class="newsletter__clover" aria-hidden="true">&#9752;</span>
         <h2 class="newsletter__title">Reste dans la boucle</h2>
         <p class="newsletter__text">
-          Reçois mes meilleurs conseils comptables et fiscaux directement dans ta boîte courriel.
-          Pas de spam — juste de la valeur.
+          Re&ccedil;ois mes meilleurs conseils comptables et fiscaux directement dans ta bo&icirc;te courriel. Pas de spam &mdash; juste de la valeur.
         </p>
         <form class="newsletter__form" onsubmit="return false;">
           <input type="email" placeholder="Ton courriel" class="newsletter__input" required>
-          <button type="submit" class="btn btn--primary">S'inscrire</button>
+          <button type="submit" class="btn btn--dark">S&rsquo;inscrire</button>
         </form>
       </div>
     </div>
@@ -439,39 +399,38 @@
     <div class="container">
       <div class="contact__grid">
         <div class="contact__info">
-          <p class="section-label">CONTACT</p>
+          <p class="eyebrow">Contact</p>
           <h2 class="section-title">On <em>jase?</em></h2>
-          <div class="services__divider"></div>
+          <div class="rule"></div>
           <p class="contact__text">
-            Prends rendez-vous pour un appel découverte gratuit.
-            On regarde ta situation ensemble et on trouve la meilleure façon de t'aider.
+            Prends rendez-vous pour un appel d&eacute;couverte gratuit. On regarde ta situation ensemble et on trouve la meilleure fa&ccedil;on de t&rsquo;aider.
           </p>
           <div class="contact__details">
             <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
               <span>corinne@gestionclv.ca</span>
             </div>
             <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Québec, Canada</span>
+              <span>Qu&eacute;bec, Canada</span>
             </div>
           </div>
           <div class="contact__social">
             <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" aria-label="Instagram @monamiecomptable">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
                 <rect x="2" y="2" width="20" height="20" rx="5"/>
                 <circle cx="12" cy="12" r="5"/>
                 <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
               </svg>
             </a>
             <a href="https://instagram.com/milesococo" target="_blank" rel="noopener" aria-label="Instagram @milesococo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
                 <rect x="2" y="2" width="20" height="20" rx="5"/>
                 <circle cx="12" cy="12" r="5"/>
                 <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
@@ -493,30 +452,30 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="footer__logo">
-            <div class="nav__monogram nav__monogram--light">M</div>
+            <span class="footer__clover">&#9752;</span>
             <div>
-              <span class="footer__brand-name">Mon Amie Comptable</span>
+              <span class="footer__brand-name">Mon amie <em>comptable</em></span>
               <span class="footer__brand-sub">GESTION CLV</span>
             </div>
           </div>
-          <p class="footer__tagline">La comptabilité, expliquée simplement.</p>
-          <p class="footer__legal-note">
-            Tout contenu reste strictement éducatif. Aucune recommandation de produit financier spécifique.
-            Conforme aux règles de l'Ordre des CPA du Québec.
+          <p class="footer__tagline">La comptabilit&eacute;, expliqu&eacute;e simplement.</p>
+          <p class="footer__legal">
+            Tout contenu reste strictement &eacute;ducatif. Aucune recommandation de produit financier sp&eacute;cifique.
+            Conforme aux r&egrave;gles de l&rsquo;Ordre des CPA du Qu&eacute;bec.
           </p>
         </div>
         <div class="footer__nav">
           <h4>Navigation</h4>
           <ul>
             <li><a href="#services">Services</a></li>
-            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#a-propos">&Agrave; propos</a></li>
             <li><a href="#ressources">Ressources</a></li>
-            <li><a href="#temoignages">Témoignages</a></li>
+            <li><a href="#temoignages">T&eacute;moignages</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer__nav">
-          <h4>Réseaux sociaux</h4>
+          <h4>R&eacute;seaux sociaux</h4>
           <ul>
             <li><a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener">@monamiecomptable</a></li>
             <li><a href="https://instagram.com/milesococo" target="_blank" rel="noopener">@milesococo</a></li>
@@ -524,8 +483,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Gestion CLV. Tous droits réservés.</p>
-        <p>Membre de l'Ordre des CPA du Québec</p>
+        <p>&copy; 2025 Gestion CLV. Tous droits r&eacute;serv&eacute;s.</p>
+        <p>Membre de l&rsquo;Ordre des CPA du Qu&eacute;bec</p>
       </div>
     </div>
   </footer>

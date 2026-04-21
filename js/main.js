@@ -1,20 +1,20 @@
 /* ============================================================
-   MON AMIE CPA — Gestion CLV
-   JavaScript principal
+   MON AMIE COMPTABLE — Gestion CLV
+   JavaScript principal — V3
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // -------------------- Navigation scroll effect --------------------
+  // -------------------- Navigation scroll --------------------
   const nav = document.getElementById('nav');
 
-  // -------------------- Parallax scroll effect --------------------
+  // -------------------- Parallax --------------------
   const parallaxEls = document.querySelectorAll('[data-parallax]');
   const viewportH = window.innerHeight;
 
   const handleParallax = () => {
     parallaxEls.forEach(el => {
-      const speed = parseFloat(el.dataset.parallax) || 0.12;
+      const speed = parseFloat(el.dataset.parallax) || 0.1;
       const rect = el.getBoundingClientRect();
       const elMid = rect.top + rect.height / 2;
       const offset = (elMid - viewportH / 2) * speed;
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       nav.classList.add('nav--scrolled');
     } else {
       nav.classList.remove('nav--scrolled');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleParallax();
 
-  // -------------------- Mobile menu toggle --------------------
+  // -------------------- Mobile menu --------------------
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
 
@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.toggle('active');
   });
 
-  // Close mobile menu on link click
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
@@ -52,70 +51,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------- Scroll animations --------------------
-  const animatedElements = document.querySelectorAll('[data-animate]');
+  const animatedEls = document.querySelectorAll('[data-animate]');
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Stagger animation for sibling elements
+        // Stagger siblings
         const siblings = entry.target.parentElement.querySelectorAll('[data-animate]');
         let delay = 0;
         siblings.forEach((sibling, i) => {
-          if (sibling === entry.target) {
-            delay = i * 100;
-          }
+          if (sibling === entry.target) delay = i * 80;
         });
-
         setTimeout(() => {
           entry.target.classList.add('visible');
         }, delay);
-
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -32px 0px',
   });
 
-  animatedElements.forEach(el => observer.observe(el));
+  animatedEls.forEach(el => observer.observe(el));
 
   // -------------------- Smooth scroll for anchor links --------------------
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
+    anchor.addEventListener('click', e => {
       const targetId = anchor.getAttribute('href');
       if (targetId === '#') return;
-
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
         const navHeight = nav.offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
     });
   });
 
-  // -------------------- Newsletter form (placeholder) --------------------
+  // -------------------- Newsletter form --------------------
   const newsletterForm = document.querySelector('.newsletter__form');
   if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
+    newsletterForm.addEventListener('submit', e => {
       e.preventDefault();
       const input = newsletterForm.querySelector('.newsletter__input');
       if (input.value) {
         input.value = '';
         const btn = newsletterForm.querySelector('.btn');
-        const originalText = btn.textContent;
-        btn.textContent = 'Merci!';
-        btn.style.backgroundColor = '#6B8264';
+        const original = btn.textContent;
+        btn.textContent = 'Merci\u00a0!';
+        btn.style.backgroundColor = '#5C7356';
+        btn.style.borderColor = '#5C7356';
         setTimeout(() => {
-          btn.textContent = originalText;
+          btn.textContent = original;
           btn.style.backgroundColor = '';
-        }, 2500);
+          btn.style.borderColor = '';
+        }, 2800);
       }
     });
   }
