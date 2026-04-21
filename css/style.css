@@ -1276,27 +1276,6 @@ ul { list-style: none; }
   color: rgba(147, 166, 137, 0.4);
 }
 
-/* -------------------- SÉPARATEUR DÉCORATIF -------------------- */
-.divider-clover {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-.divider-clover__line {
-  flex: 1;
-  height: 1px;
-  background-color: var(--sable);
-}
-.divider-clover__icon {
-  font-size: 16px;
-  color: var(--sauge-soft);
-  line-height: 1;
-  font-family: serif;
-}
-
 /* -------------------- ANIMATIONS -------------------- */
 [data-parallax] { will-change: transform; }
 
