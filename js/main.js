@@ -97,34 +97,30 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = contactForm.querySelector('.contact__form-submit');
       const success = document.getElementById('contactSuccess');
-      const original = btn.textContent;
-      btn.textContent = 'Envoi\u2026';
+      const originalText = btn.textContent;
+
+      btn.textContent = 'Envoi en cours\u2026';
       btn.disabled = true;
 
-      // To activate: replace YOUR_FORM_ID with your Formspree form ID (formspree.io)
-      const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
-      const data = new FormData(contactForm);
-
       try {
-        const res = await fetch(formspreeEndpoint, {
+        const res = await fetch(contactForm.action, {
           method: 'POST',
-          body: data,
+          body: new FormData(contactForm),
           headers: { Accept: 'application/json' },
         });
+
         if (res.ok) {
           contactForm.reset();
+          contactForm.style.display = 'none';
           success.classList.add('visible');
-          btn.textContent = original;
-          btn.disabled = false;
         } else {
-          btn.textContent = original;
+          btn.textContent = originalText;
           btn.disabled = false;
-          alert('Une erreur s\u2019est produite. \u00c9cris-moi directement \u00e0 c.claveau@gestionclv.ca');
+          btn.textContent = 'Erreur \u2014 r\u00e9essaie ou \u00e9cris-moi directement';
         }
       } catch {
-        btn.textContent = original;
+        btn.textContent = originalText;
         btn.disabled = false;
-        alert('Une erreur s\u2019est produite. \u00c9cris-moi directement \u00e0 c.claveau@gestionclv.ca');
       }
     });
   }

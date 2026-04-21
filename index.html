@@ -423,14 +423,50 @@
 
         <div class="contact__panel">
           <p class="contact__panel-eyebrow">02 &middot; Un petit message</p>
-          <!-- Pour activer : crée un formulaire sur typeform.com et remplace YOUR_TYPEFORM_ID dans l'URL ci-dessous -->
-          <iframe
-            src="https://form.typeform.com/to/YOUR_TYPEFORM_ID"
-            class="contact__typeform"
-            frameborder="0"
-            allow="camera; microphone; autoplay; encrypted-media;"
-            title="Formulaire de contact"
-          ></iframe>
+          <div class="contact__form-wrap">
+            <!-- Pour activer l'envoi par courriel :
+                 1. Va sur formspree.io et crée un compte gratuit
+                 2. Crée un formulaire, copie l'ID (ex: xabc1234)
+                 3. Remplace YOUR_FORM_ID ci-dessous par cet ID -->
+            <form class="contact__form" id="contactForm"
+                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  method="POST">
+              <div class="contact__form-row">
+                <div class="contact__form-group">
+                  <label class="contact__form-label" for="cName">Pr&eacute;nom</label>
+                  <input class="contact__form-input" type="text" id="cName"
+                         name="prenom" placeholder="Marie-&Egrave;ve"
+                         required autocomplete="given-name">
+                </div>
+                <div class="contact__form-group">
+                  <label class="contact__form-label" for="cLast">Nom</label>
+                  <input class="contact__form-input" type="text" id="cLast"
+                         name="nom" placeholder="Tremblay"
+                         autocomplete="family-name">
+                </div>
+              </div>
+              <div class="contact__form-group">
+                <label class="contact__form-label" for="cEmail">Courriel</label>
+                <input class="contact__form-input" type="email" id="cEmail"
+                       name="courriel" placeholder="toi@exemple.com"
+                       required autocomplete="email">
+              </div>
+              <div class="contact__form-group">
+                <label class="contact__form-label" for="cMsg">Ton message</label>
+                <textarea class="contact__form-textarea" id="cMsg"
+                          name="message"
+                          placeholder="Bonjour Corinne&hellip;"
+                          required></textarea>
+              </div>
+              <input type="text" name="_gotcha" style="display:none">
+              <button type="submit" class="contact__form-submit">
+                Envoyer mon message &rarr;
+              </button>
+              <p class="contact__form-success" id="contactSuccess" aria-live="polite">
+                Merci&nbsp;! Je reviens vers toi sous 48&nbsp;h. &#9752;
+              </p>
+            </form>
+          </div>
         </div>
 
       </div>
