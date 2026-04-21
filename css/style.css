@@ -698,6 +698,20 @@ ul { list-style: none; }
   inset: 0;
   background-color: rgba(217, 204, 180, 0.90);
 }
+@media (min-width: 900px) {
+  .editorial-quote {
+    min-height: 660px;
+    background-position: right center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  .editorial-quote::before {
+    background: linear-gradient(to right,
+      rgba(217, 204, 180, 0.97) 35%,
+      rgba(217, 204, 180, 0.70) 60%,
+      rgba(217, 204, 180, 0.20) 100%);
+  }
+}
 .editorial-quote .container {
   position: relative;
   z-index: 1;
