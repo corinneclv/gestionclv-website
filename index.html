@@ -396,52 +396,21 @@
   <section class="contact" id="contact">
     <div class="contact__clover-bg" aria-hidden="true">&#9752;</div>
     <div class="container">
-      <div class="contact__top">
-        <div class="contact__top-left">
-          <p class="eyebrow">Contact</p>
-          <h2 class="section-title">On jase&nbsp;?<br><em>T&rsquo;as deux choix.</em></h2>
-          <div class="rule"></div>
-          <p class="contact__text">
-            Prends rendez-vous directement dans mon agenda pour <em><strong>un appel d&eacute;couverte gratuit</strong></em>, ou envoie-moi un message si tu pr&eacute;f&egrave;res &eacute;crire en premier. Pas de pression, juste la bonne fa&ccedil;on pour toi.
-          </p>
-        </div>
-        <div class="contact__top-right">
-          <div class="contact__details">
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <span>c.claveau@gestionclv.ca</span>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>Montr&eacute;al, Qu&eacute;bec, Canada</span>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>Nice, France</span>
-            </div>
-          </div>
-          <div class="contact__social">
-            <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="contact__social-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
-                <rect x="2" y="2" width="20" height="20" rx="5"/>
-                <circle cx="12" cy="12" r="5"/>
-                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-              </svg>
-              <span>Mon Amie Comptable</span>
-            </a>
-          </div>
-        </div>
+
+      <!-- En-tête pleine largeur -->
+      <div class="contact__header">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">On jase&nbsp;? <em>T&rsquo;as deux choix.</em></h2>
+        <div class="rule"></div>
+        <p class="contact__intro">
+          Prends rendez-vous directement dans mon agenda, ou &eacute;cris-moi un message si tu pr&eacute;f&egrave;res. Pas de pression, juste la bonne fa&ccedil;on pour toi.
+        </p>
       </div>
+
+      <!-- Deux panneaux côte à côte -->
       <div class="contact__choices">
+
+        <!-- 01 — Appel -->
         <div class="contact__choice">
           <span class="contact__choice-num">01</span>
           <h3 class="contact__choice-title">Un appel <em>gratuit</em></h3>
@@ -452,7 +421,31 @@
             Choisir un moment &rarr;
           </a>
           <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+          <!-- Coordonnées dans le panneau appel -->
+          <div class="contact__info">
+            <div class="contact__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>c.claveau@gestionclv.ca</span>
+            </div>
+            <div class="contact__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Montr&eacute;al, Qu&eacute;bec, Canada</span>
+            </div>
+            <div class="contact__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Nice, France</span>
+            </div>
+            <div class="contact__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="contact__social-link">
+                <span>@monamiecomptable</span>
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- 02 — Formulaire -->
         <div class="contact__choice contact__choice--form">
           <span class="contact__choice-num">02</span>
           <h3 class="contact__choice-title">Un petit <em>courriel</em></h3>
@@ -476,6 +469,7 @@
             <p class="contact__form-success" id="contactSuccess">Merci&nbsp;! Je reviens vers toi sous 48&nbsp;h. &#9752;</p>
           </form>
         </div>
+
       </div>
     </div>
   </section>

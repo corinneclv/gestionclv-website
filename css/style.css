@@ -1043,58 +1043,38 @@ ul { list-style: none; }
   user-select: none;
   font-family: Georgia, serif;
 }
-.contact__top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  margin-bottom: 64px;
-  padding-bottom: 64px;
-  border-bottom: 1px solid var(--sable);
+.contact__header {
+  max-width: 640px;
+  margin-bottom: 56px;
 }
-.contact__top-right { padding-top: 8px; }
-.contact__text {
+.contact__intro {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(28, 42, 32, 0.75);
+  color: rgba(28, 42, 32, 0.70);
 }
-.contact__details {
+.contact__info {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 28px;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--sable);
 }
 .contact__detail {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
+  gap: 10px;
+  font-size: 13px;
   color: var(--sauge-deep);
 }
 .contact__detail svg { flex-shrink: 0; color: var(--sauge); }
-.contact__social { display: flex; gap: 16px; }
 .contact__social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   color: var(--sauge-deep);
   transition: color 0.2s ease;
 }
 .contact__social-link:hover { color: var(--sauge); }
 .contact__social-link span {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 16px;
-  font-variation-settings: "opsz" 16;
-}
-.contact__text em strong {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  color: var(--sauge-deep);
-  font-size: 16px;
-  font-variation-settings: "opsz" 16;
+  font-size: 13px;
 }
 
 /* Two-choice panels */
@@ -1331,7 +1311,6 @@ ul { list-style: none; }
   .instagram__grid { grid-template-columns: repeat(2, 1fr); }
   .instagram__post { border-bottom: 1px solid rgba(147,166,137,0.15); }
 
-  .contact__top { grid-template-columns: 1fr; gap: 48px; }
   .contact__choices { grid-template-columns: 1fr; }
   .contact__choice:first-child { border-right: none; border-bottom: 1px solid var(--sable); }
   .contact__choice { padding: 40px 28px; }
