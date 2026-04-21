@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const siblings = entry.target.parentElement.querySelectorAll('[data-animate]');
         let delay = 0;
         siblings.forEach((sibling, i) => {
-          if (sibling === entry.target) delay = i * 80;
+          if (sibling === entry.target) delay = i * 120;
         });
         setTimeout(() => {
           entry.target.classList.add('visible');
