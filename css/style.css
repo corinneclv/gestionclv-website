@@ -1023,11 +1023,30 @@ ul { list-style: none; }
   display: flex;
   gap: 16px;
 }
-.contact__social a {
+.contact__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--sauge-deep);
   transition: color 0.2s ease;
 }
-.contact__social a:hover { color: var(--sauge); }
+.contact__social-link:hover { color: var(--sauge); }
+.contact__social-link span {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  font-variation-settings: "opsz" 16;
+}
+
+.contact__text em strong {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sauge-deep);
+  font-size: 16px;
+  font-variation-settings: "opsz" 16;
+}
 
 /* -------------------- FOOTER -------------------- */
 .footer {
