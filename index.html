@@ -397,80 +397,62 @@
     <div class="contact__clover-bg" aria-hidden="true">&#9752;</div>
     <div class="container">
 
-      <!-- En-tête pleine largeur -->
+      <!-- En-tête -->
       <div class="contact__header">
         <p class="eyebrow">Contact</p>
         <h2 class="section-title">On jase&nbsp;? <em>T&rsquo;as deux choix.</em></h2>
         <div class="rule"></div>
         <p class="contact__intro">
-          Prends rendez-vous directement dans mon agenda, ou &eacute;cris-moi un message si tu pr&eacute;f&egrave;res. Pas de pression, juste la bonne fa&ccedil;on pour toi.
+          Prends un rendez-vous directement dans mon agenda, ou envoie-moi un message. Pas de pression, juste la bonne fa&ccedil;on pour toi.
         </p>
       </div>
 
-      <!-- Deux panneaux côte à côte -->
-      <div class="contact__choices">
+      <!-- Deux panneaux : Calendly | Typeform -->
+      <div class="contact__panels">
 
-        <!-- 01 — Appel -->
-        <div class="contact__choice">
-          <span class="contact__choice-num">01</span>
-          <h3 class="contact__choice-title">Un appel <em>gratuit</em></h3>
-          <p class="contact__choice-text">
-            30 minutes, sans engagement. Tu me parles de ta situation, je te dis si je suis la bonne personne pour t&rsquo;aider. Z&eacute;ro pression.
-          </p>
-          <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/c-claveau-gestionclv/30min'}); return false;" class="btn btn--dark">
-            Choisir un moment &rarr;
-          </a>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-          <!-- Coordonnées dans le panneau appel -->
-          <div class="contact__info">
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>c.claveau@gestionclv.ca</span>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Montr&eacute;al, Qu&eacute;bec, Canada</span>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Nice, France</span>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-              <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="contact__social-link">
-                <span>@monamiecomptable</span>
-              </a>
-            </div>
+        <div class="contact__panel">
+          <p class="contact__panel-eyebrow">01 &middot; Un appel gratuit de 30 min</p>
+          <div class="calendly-inline-widget"
+            data-url="https://calendly.com/c-claveau-gestionclv/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+            style="min-width:280px;height:650px;">
           </div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
 
-        <!-- 02 — Formulaire -->
-        <div class="contact__choice contact__choice--form">
-          <span class="contact__choice-num">02</span>
-          <h3 class="contact__choice-title">Un petit <em>courriel</em></h3>
-          <p class="contact__choice-text">
-            Tu pr&eacute;f&egrave;res &eacute;crire avant d&rsquo;appeler&nbsp;? Remplis le formulaire, je te reviens sous 48&nbsp;h.
-          </p>
-          <form class="contact__form" id="contactForm">
-            <div class="contact__form-group">
-              <label class="contact__form-label" for="contactName">Pr&eacute;nom</label>
-              <input class="contact__form-input" type="text" id="contactName" name="name" placeholder="Marie-&Egrave;ve" required>
-            </div>
-            <div class="contact__form-group">
-              <label class="contact__form-label" for="contactEmail">Courriel</label>
-              <input class="contact__form-input" type="email" id="contactEmail" name="email" placeholder="toi@exemple.com" required>
-            </div>
-            <div class="contact__form-group">
-              <label class="contact__form-label" for="contactMessage">Ton message</label>
-              <textarea class="contact__form-textarea" id="contactMessage" name="message" placeholder="Bonjour Corinne&hellip;" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--dark contact__form-submit">Envoyer &rarr;</button>
-            <p class="contact__form-success" id="contactSuccess">Merci&nbsp;! Je reviens vers toi sous 48&nbsp;h. &#9752;</p>
-          </form>
+        <div class="contact__panel">
+          <p class="contact__panel-eyebrow">02 &middot; Un petit message</p>
+          <!-- Pour activer : crée un formulaire sur typeform.com et remplace YOUR_TYPEFORM_ID dans l'URL ci-dessous -->
+          <iframe
+            src="https://form.typeform.com/to/YOUR_TYPEFORM_ID"
+            class="contact__typeform"
+            frameborder="0"
+            allow="camera; microphone; autoplay; encrypted-media;"
+            title="Formulaire de contact"
+          ></iframe>
         </div>
 
       </div>
+
+      <!-- Coordonnées -->
+      <div class="contact__details-row">
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>c.claveau@gestionclv.ca</span>
+        </div>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Montr&eacute;al, Qu&eacute;bec, Canada</span>
+        </div>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Nice, France</span>
+        </div>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <a href="https://instagram.com/monamiecomptable" target="_blank" rel="noopener" class="contact__social-link">@monamiecomptable</a>
+        </div>
+      </div>
+
     </div>
   </section>
 

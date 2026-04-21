@@ -1026,7 +1026,7 @@ ul { list-style: none; }
 
 /* -------------------- CONTACT -------------------- */
 .contact {
-  padding: 120px 0;
+  padding: 100px 0;
   background-color: var(--ivoire);
   position: relative;
   overflow: hidden;
@@ -1044,26 +1044,57 @@ ul { list-style: none; }
   font-family: Georgia, serif;
 }
 .contact__header {
-  max-width: 640px;
-  margin-bottom: 56px;
+  max-width: 600px;
+  margin-bottom: 52px;
 }
 .contact__intro {
   font-size: 15px;
   line-height: 1.8;
   color: rgba(28, 42, 32, 0.70);
 }
-.contact__info {
+
+/* Deux panneaux côte à côte */
+.contact__panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--sable);
+  margin-bottom: 40px;
+}
+.contact__panel {
+  overflow: hidden;
+}
+.contact__panel:first-child {
+  border-right: 1px solid var(--sable);
+}
+.contact__panel-eyebrow {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sauge);
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--sable);
+}
+.contact__typeform {
+  display: block;
+  width: 100%;
+  height: 650px;
+  border: none;
+}
+
+/* Coordonnées en bas */
+.contact__details-row {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 12px 36px;
   padding-top: 32px;
   border-top: 1px solid var(--sable);
 }
 .contact__detail {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 13px;
   color: var(--sauge-deep);
 }
@@ -1073,93 +1104,6 @@ ul { list-style: none; }
   transition: color 0.2s ease;
 }
 .contact__social-link:hover { color: var(--sauge); }
-.contact__social-link span {
-  font-size: 13px;
-}
-
-/* Two-choice panels */
-.contact__choices {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--sable);
-}
-.contact__choice {
-  padding: 52px 48px;
-}
-.contact__choice:first-child { border-right: 1px solid var(--sable); }
-.contact__choice-num {
-  display: block;
-  font-family: var(--serif);
-  font-size: 52px;
-  font-weight: 300;
-  color: var(--sable);
-  line-height: 1;
-  margin-bottom: 20px;
-  font-variation-settings: "opsz" 52;
-}
-.contact__choice-title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(22px, 2.5vw, 30px);
-  line-height: 1.1;
-  color: var(--foret);
-  margin-bottom: 14px;
-  font-variation-settings: "opsz" 30;
-}
-.contact__choice-title em { font-style: italic; color: var(--sauge); }
-.contact__choice-text {
-  font-size: 14px;
-  line-height: 1.75;
-  color: rgba(28, 42, 32, 0.65);
-  margin-bottom: 32px;
-}
-
-/* Contact form */
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.contact__form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.contact__form-label {
-  font-family: var(--sans);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--sauge);
-}
-.contact__form-input,
-.contact__form-textarea {
-  font-family: var(--sans);
-  font-size: 14px;
-  color: var(--foret);
-  background-color: var(--cream);
-  border: 1px solid var(--sable);
-  padding: 11px 15px;
-  outline: none;
-  width: 100%;
-  transition: border-color 0.2s ease;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-.contact__form-input:focus,
-.contact__form-textarea:focus { border-color: var(--sauge); }
-.contact__form-textarea { resize: vertical; min-height: 96px; }
-.contact__form-submit { align-self: flex-start; margin-top: 4px; }
-.contact__form-success {
-  display: none;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 15px;
-  color: var(--sauge);
-  margin-top: 8px;
-}
-.contact__form-success.visible { display: block; }
 
 /* -------------------- FOOTER -------------------- */
 .footer {
@@ -1311,9 +1255,9 @@ ul { list-style: none; }
   .instagram__grid { grid-template-columns: repeat(2, 1fr); }
   .instagram__post { border-bottom: 1px solid rgba(147,166,137,0.15); }
 
-  .contact__choices { grid-template-columns: 1fr; }
-  .contact__choice:first-child { border-right: none; border-bottom: 1px solid var(--sable); }
-  .contact__choice { padding: 40px 28px; }
+  .contact__panels { grid-template-columns: 1fr; }
+  .contact__panel:first-child { border-right: none; border-bottom: 1px solid var(--sable); }
+  .contact__typeform { height: 560px; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 40px; }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
