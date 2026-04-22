@@ -125,6 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // -------------------- FAQ accordion --------------------
+  document.querySelectorAll('.faq__question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answer = btn.nextElementSibling;
+      btn.setAttribute('aria-expanded', String(!expanded));
+      answer.hidden = expanded;
+    });
+  });
+
   // -------------------- Newsletter form --------------------
   const newsletterForm = document.querySelector('.newsletter__form');
   if (newsletterForm) {
