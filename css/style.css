@@ -680,6 +680,8 @@ ul { list-style: none; }
   margin-top: auto;
 }
 .service-card__link:hover { color: var(--sauge-soft); }
+.service-card--featured .service-card__link { color: var(--sauge-soft); }
+.service-card--featured .service-card__link:hover { color: var(--cream); }
 .service-card__inclus-label {
   font-family: var(--sans);
   font-size: 9px;
