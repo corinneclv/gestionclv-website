@@ -103,10 +103,12 @@ Tout en haut de `css/style.css`, le bloc `:root` contient la palette complète (
 
 ## À faire (état au 10 juin 2026)
 
-1. **Brancher ton vrai domaine.** `monamiecomptable.ca` est acheté mais encore parqué chez le registraire ; `gestionclv.ca` pointe vers l'ancien site Wix. Pour brancher monamiecomptable.ca :
-   - Chez ton registraire de domaine, crée 4 enregistrements **A** pour `monamiecomptable.ca` vers : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, et un **CNAME** `www` vers `corinneclv.github.io`
-   - Sur GitHub : **Settings → Pages → Custom domain** → entre `monamiecomptable.ca`, attends la vérification, coche **Enforce HTTPS**
-   - Dans le code, remplace ensuite toutes les occurrences de `https://corinneclv.github.io/gestionclv-website/` par `https://monamiecomptable.ca/` (dans `index.html`, `sitemap.xml`, `robots.txt` et `404.html`)
+1. **Brancher gestionclv.ca (domaine principal).** Le domaine pointe encore vers l'ancien site Wix. Tout se passe chez GoDaddy + GitHub :
+   - **GoDaddy → gestionclv.ca → DNS** : remplace l'enregistrement **A** actuel (`@` → `185.230.63.107`, c'est Wix) par 4 enregistrements **A** : `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. Le CNAME `www` → `corinneclv.github.io` existe déjà, n'y touche pas.
+   - **ATTENTION COURRIEL** : ne supprime JAMAIS les enregistrements **MX** ni **TXT** de gestionclv.ca, sinon ton adresse c.claveau@gestionclv.ca arrête de fonctionner. Touche uniquement aux enregistrements A.
+   - **GitHub → Settings → Pages → Custom domain** : entre `gestionclv.ca`, attends la coche verte (le temps que le DNS se propage, jusqu'à 1 h), puis coche **Enforce HTTPS** dès que la case devient cliquable.
+   - **GoDaddy → monamiecomptable.ca → Redirection (Forwarding)** : ajoute une redirection de domaine vers `https://gestionclv.ca`, type **301 permanent**, mode « Forward only » (pas de masquage).
+   - Dans le code, remplace ensuite toutes les occurrences de `https://corinneclv.github.io/gestionclv-website/` par `https://gestionclv.ca/` (dans `index.html`, `sitemap.xml`, `robots.txt`, `404.html` et ce README), et dans `404.html` change le lien `href="/gestionclv-website/"` en `href="/"`.
 2. **Créer les 3 ressources téléchargeables.** Les boutons « Télécharger » (guide du travailleur autonome, template budget, checklist fiscale) renvoient pour l'instant vers le formulaire de contact, car les PDF n'existent pas encore.
 3. **Valider les témoignages.** Les 3 témoignages actuels sont des exemples fictifs. À remplacer par de vrais témoignages clients (avec leur accord) ou à retirer, en gardant en tête les règles de publicité de l'Ordre des CPA.
 
