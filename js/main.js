@@ -41,12 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
     navMenu.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
   });
 
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navMenu.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           btn.textContent = originalText;
           btn.disabled = false;
-          btn.textContent = 'Erreur \u2014 r\u00e9essaie ou \u00e9cris-moi directement';
+          btn.textContent = 'Erreur - r\u00e9essaie ou \u00e9cris-moi directement';
         }
       } catch {
         btn.textContent = originalText;
@@ -136,23 +138,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------- Newsletter form --------------------
-  const newsletterForm = document.querySelector('.newsletter__form');
+  const newsletterForm = document.getElementById('newsletterForm');
   if (newsletterForm) {
-    newsletterForm.addEventListener('submit', e => {
+    newsletterForm.addEventListener('submit', async e => {
       e.preventDefault();
       const input = newsletterForm.querySelector('.newsletter__input');
-      if (input.value) {
-        input.value = '';
-        const btn = newsletterForm.querySelector('.btn');
-        const original = btn.textContent;
-        btn.textContent = 'Merci\u00a0!';
-        btn.style.backgroundColor = '#5C7356';
-        btn.style.borderColor = '#5C7356';
-        setTimeout(() => {
-          btn.textContent = original;
-          btn.style.backgroundColor = '';
-          btn.style.borderColor = '';
-        }, 2800);
+      const btn = newsletterForm.querySelector('.btn');
+      const original = btn.textContent;
+
+      btn.textContent = 'Envoi\u2026';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(newsletterForm.action, {
+          method: 'POST',
+          body: new FormData(newsletterForm),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (res.ok) {
+          input.value = '';
+          btn.textContent = 'Merci\u00a0!';
+          btn.style.backgroundColor = '#5C7356';
+          btn.style.borderColor = '#5C7356';
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.disabled = false;
+            btn.style.backgroundColor = '';
+            btn.style.borderColor = '';
+          }, 2800);
+        } else {
+          btn.textContent = 'Erreur - r\u00e9essaie';
+          btn.disabled = false;
+          setTimeout(() => { btn.textContent = original; }, 2800);
+        }
+      } catch {
+        btn.textContent = 'Erreur - r\u00e9essaie';
+        btn.disabled = false;
+        setTimeout(() => { btn.textContent = original; }, 2800);
       }
     });
   }
