@@ -101,14 +101,13 @@ Tout en haut de `css/style.css`, le bloc `:root` contient la palette complète (
 | **Calendly** | Le calendrier de prise de rendez-vous intégré dans la section Contact | Ton compte Calendly (`c-claveau-gestionclv/30min`) |
 | **Google Fonts** | Les polices Fraunces et Inter | Rien à gérer |
 
-## À faire (état au 10 juin 2026)
+## À faire (état au 11 juin 2026)
 
-1. **Brancher gestionclv.ca (domaine principal).** Le domaine pointe encore vers l'ancien site Wix. Tout se passe chez GoDaddy + GitHub :
-   - **GoDaddy → gestionclv.ca → DNS** : remplace l'enregistrement **A** actuel (`@` → `185.230.63.107`, c'est Wix) par 4 enregistrements **A** : `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. Le CNAME `www` → `corinneclv.github.io` existe déjà, n'y touche pas.
-   - **ATTENTION COURRIEL** : ne supprime JAMAIS les enregistrements **MX** ni **TXT** de gestionclv.ca, sinon ton adresse c.claveau@gestionclv.ca arrête de fonctionner. Touche uniquement aux enregistrements A.
-   - **GitHub → Settings → Pages → Custom domain** : entre `gestionclv.ca`, attends la coche verte (le temps que le DNS se propage, jusqu'à 1 h), puis coche **Enforce HTTPS** dès que la case devient cliquable.
-   - **GoDaddy → monamiecomptable.ca → Redirection (Forwarding)** : ajoute une redirection de domaine vers `https://gestionclv.ca`, type **301 permanent**, mode « Forward only » (pas de masquage).
-   - Dans le code, remplace ensuite toutes les occurrences de `https://corinneclv.github.io/gestionclv-website/` par `https://gestionclv.ca/` (dans `index.html`, `sitemap.xml`, `robots.txt`, `404.html` et ce README), et dans `404.html` change le lien `href="/gestionclv-website/"` en `href="/"`.
+1. **Brancher monamiecomptable.ca (domaine principal) et rediriger gestionclv.ca.** Le code (CNAME + URLs canoniques/SEO) est déjà sur `monamiecomptable.ca`. Il reste à inverser le DNS chez GoDaddy, car les 4 enregistrements A de GitHub ont été mis sur gestionclv.ca par erreur. Tout se passe chez GoDaddy + GitHub :
+   - **GoDaddy → monamiecomptable.ca → DNS** : enlève la redirection/parking actuelle, puis ajoute 4 enregistrements **A** : `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. Ajoute aussi un CNAME `www` → `corinneclv.github.io`.
+   - **GitHub → Settings → Pages → Custom domain** : entre `monamiecomptable.ca`, attends la coche verte (jusqu'à 1 h de propagation), puis coche **Enforce HTTPS**.
+   - **GoDaddy → gestionclv.ca → DNS** : supprime les 4 enregistrements **A** qui pointent vers GitHub (`185.199.x.153`), puis crée une **redirection (Forwarding)** du domaine vers `https://monamiecomptable.ca`, type **301 permanent**, mode « Forward only » (pas de masquage).
+   - **ATTENTION COURRIEL** : sur gestionclv.ca, ne supprime JAMAIS les enregistrements **MX** ni **TXT**, sinon ton adresse c.claveau@gestionclv.ca arrête de fonctionner. Touche uniquement aux enregistrements **A**.
 2. **Créer les 3 ressources téléchargeables.** Les boutons « Télécharger » (guide du travailleur autonome, template budget, checklist fiscale) renvoient pour l'instant vers le formulaire de contact, car les PDF n'existent pas encore.
 3. **Valider les témoignages.** Les 3 témoignages actuels sont des exemples fictifs. À remplacer par de vrais témoignages clients (avec leur accord) ou à retirer, en gardant en tête les règles de publicité de l'Ordre des CPA.
 

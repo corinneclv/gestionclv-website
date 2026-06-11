@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gestionclv.ca/sitemap.xml
+Sitemap: https://monamiecomptable.ca/sitemap.xml
